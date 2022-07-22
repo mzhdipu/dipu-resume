@@ -1,0 +1,67 @@
+/*
+======================================================
+            for all after Before
+======================================================
+*/
+@mixin afterBefore(
+    $position: absolute,
+    $display: block
+){
+    position: $position;
+    display: $display;
+}
+
+
+
+
+
+/*
+======================================================
+
+======================================================
+*/
+
+
+
+
+/*
+======================================================
+
+======================================================
+*/
+
+/****
+===================================================
+      for simple image parallax effect bg
+===================================================
+****/
+@mixin imageBgParallax(
+    $backgroundAttachment : fixed,
+    $backgroundPosition : center,
+    $backgroundRepeat : no-repeat
+)
+{
+    background-attachment : $backgroundAttachment;
+    background-position : $backgroundPosition;
+    background-repeat : $backgroundRepeat;
+}
+
+/****
+===================================================
+    for multi browser transition effect
+===================================================
+****/
+@mixin transitionEffect(
+    $transition: all 0.8s,
+       $webkit-transition: all 0.8s,
+       $moz-transition: all 0.8s,
+       $ms-transition: all 0.8s,
+       $o-transition: all 0.8s
+)
+{
+    transition: $transition;
+    -webkit-transition: $webkit-transition;
+    -moz-transition:  $moz-transition;
+    -ms-transition:  $ms-transition;
+    -o-transition: $o-transition;
+}

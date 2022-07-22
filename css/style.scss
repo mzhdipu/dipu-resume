@@ -1,0 +1,708 @@
+@import "variable";
+@import "mixin";
+
+
+/* preloader styles
+/* ========================================== */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background: none repeat scroll 0 0 #fff; }
+
+.sk-rotating-plane {
+    width: 40px;
+    height: 40px;
+    background-color: #ffe400;
+    -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
+    animation: sk-rotatePlane 1.2s infinite ease-in-out; }
+
+@-webkit-keyframes sk-rotatePlane {
+    0% {
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+    50% {
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+    100% {
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
+@keyframes sk-rotatePlane {
+    0% {
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+    50% {
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+    100% {
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
+
+
+
+
+
+
+/*************************************************************************************/
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-size:14px;
+    position: relative;
+}
+*:focus {
+    outline: 0;
+}
+/****
+===========================================================
+        All Section Tittle
+===========================================================
+***/
+.sectionTitle{
+    margin-bottom: 120px;
+    h2{
+        position: relative;
+        text-transform: uppercase;
+        font-weight:bold;
+        font-size:60px;
+        &::after{
+            content:"................" ;
+            @include afterBefore;
+            top: 69px;
+            left: 480px;
+            font-size: 20px;
+        }
+        &::before{
+            content:"................" ;
+            @include afterBefore;
+            top: 69px;
+            right: 480px;
+            font-size: 20px;
+        }
+    }
+}
+
+
+/****
+===========================================================
+        All Button Effect
+===========================================================
+***/
+.btn{
+    background: #ffffff;
+    border:2px solid #000000;
+    color:#000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 12px 6px;
+    @include transitionEffect;
+
+    &:hover,&:active,&:focus{
+        background: #000000;
+        border: 2px solid #ffffff;
+        color:#ffffff;
+        border-radius: 5px;
+        outline: none;
+    }
+}
+
+/********************************************************
+                All social
+********************************************************/
+.social {
+    padding: 10px 0 0 0;
+    li {
+        list-style: none;
+        display: inline-block;
+        padding: 6px;
+        a {
+            color: #000000;
+            font-size: 20px;
+            font-weight: 300;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.4s ease-in-out;
+            margin: 0 8px 14px 8px;
+            border:1px solid #000000;
+            &:hover {
+                background: #000000;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+/****
+===========================================================
+                Header Section
+===========================================================
+***/
+header {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+}
+header a .mainLogo{
+    margin-top: 27px;
+}
+nav {
+    padding:0;
+    position:absolute;
+    width: 100%;
+    background:#fff;
+    top: -130px;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    transition: all 1s ease;
+    margin: 0;
+    background-clip: content-box;
+    overflow: hidden;
+}
+nav .navLogo{
+    margin: 20px 0 0 100px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+    width: 800px;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+nav ul li {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+}
+nav ul li a {
+    color:#333;
+    font-size:16px;
+    padding:0 15px;
+    font-weight:400;
+
+}
+nav ul li a:hover {
+    text-decoration:none;
+    color:#3498db;
+
+}
+
+/*.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: yellow;
+    color: #000;
+}*/
+
+.nav-tabs{
+    border: none;
+}
+
+
+header button {
+    position: fixed;
+    padding: 40px 30px;
+    right: 95px;
+    top: 0px;
+    width: 100px;
+    background-color: transparent;
+    border: 0;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+header button span {
+    display: block;
+    height: 5px;
+    width: 40px;
+    background-color: #000;
+    position: absolute;
+    top: 39px
+}
+header button .line-2 {
+    margin-top: 9px;
+    transition: all 300ms ease
+}
+
+header button .line-3 {
+    margin-top: 18px
+}
+header button .line-1,
+header button .line-3 {
+    transition: all 0.5s ease
+}
+.open button {
+    background-color: transparent
+}
+.open button .line-2 {
+    background:transparent;
+}
+
+.open button .line-1 {
+    top: 48px;
+    transform: rotate(45deg);
+}
+
+.open button .line-3 {
+    top: 30px;
+    transform: rotate(-45deg);
+}
+.open nav {
+    width: 100%;
+    height: 100px;
+    top: 0;
+}
+
+
+/************/
+.activeheader button {
+    background-color: transparent
+}
+.activeheader button .line-2 {
+    background:transparent;
+}
+
+.activeheader button .line-1 {
+    top: 48px;
+    transform: rotate(45deg);
+}
+
+.activeheader button .line-3 {
+    top: 30px;
+    transform: rotate(-45deg);
+}
+.activeheader nav {
+    width: 100%;
+    height: 100px;
+    top: 0;
+    background-color: #EBC700;
+}
+
+
+
+
+/*****/
+
+
+
+
+
+
+
+/****
+===========================================================
+                Banner Section
+===========================================================
+***/
+#banner{
+    background-image: url("../images/banner/banner.jpg");
+    @include imageBgParallax;
+    background-size: cover;
+    height:1000px;
+    .vegas-timer{
+        display:none;
+    }
+    .freelancer{
+            margin: 280px 0 0 0;
+            color:#ffffff;
+            p{
+                font-size: 30px;
+            }
+            h2{
+                font-weight: 800;
+                font-size: 80px;
+                margin-top: -8px;
+            }
+        .social{
+            padding: 40px 0 0 0;
+            }
+        }
+
+    .mySelf{
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        overflow: hidden;
+        padding: 40px;
+        border-radius: 10px;
+        margin: 70px 0 50px 0;
+        .mySelfLeft{
+            h1{
+                font-size: 50px;
+                font-weight: bold;
+            }
+            h2{
+                font-size: 35px;
+            }
+            hr{
+                transform: rotate(89deg);
+                border-top: 2px solid #ffffff;
+                margin: 20px -268px 20px 275px;
+            }
+        }
+
+        .mySelfRight{
+            p{
+                margin: 20px 0 0 10px;
+                font-size: 16px;
+                font-weight: bold;
+                a{
+                    text-decoration: none;
+                    color:#ffffff;
+                }
+                span{
+                    font-weight: normal;;
+                }
+            }
+        }
+    }
+    .downBnt{
+        margin: -20px auto 0;
+        a i{
+            text-align: center;
+            color:#ffffff;
+            text-decoration: none;
+            animation-delay: 3s;
+        }
+    }
+}
+
+
+
+
+/****
+===========================================================
+       About SEction
+===========================================================
+***/
+#about{
+    margin: $margin;
+    .aboutLeft{
+        figure img{
+            border: 1px solid #000000;
+            padding: 5px;
+        }
+    }
+    .aboutRight{
+        p{
+            line-height: 2em;
+        }
+        .aboutAddress{
+            margin: 20px 0 20px 30px;
+            p{
+                font-weight: bold;
+                text-transform: uppercase;
+                color:#000000;
+                line-height: 1.7em;
+                span{
+                    font-weight: normal;
+                    text-transform: none;
+                }
+            }
+        }
+        .social{
+            margin-left: -14px;
+        }
+        .btn{
+            margin-left: 0;
+        }
+    }
+}
+
+
+
+
+
+/****
+===========================================================
+       Skill SEction
+===========================================================
+***/
+#skill{
+    margin: $margin;
+    .skillLeft{
+        figure{
+            img{
+                border:1px solid #000000;
+                padding: 5px;
+                height: 402px;
+            }
+            figcaption{
+
+            }
+        }
+    }
+    .skillRight{
+        margin: -40px 0 0 0;
+        z-index:-1;
+        .tooltip{
+            position:relative;
+            float:right;
+        }
+        .tooltip > .tooltip-inner {background-color: #000000;
+            padding:5px 15px;
+            color: #ffffff;
+            font-weight:bold; font-size:13px;
+        }
+        .popOver + .tooltip > .tooltip-arrow {	border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #000000;}
+
+        /*section{
+            margin:100px auto;
+            height:1000px;
+        }*/
+        .progress{
+            border-radius:0;
+            overflow:visible;
+        }
+        .progress-bar{
+            background:#EBC700;
+            -webkit-transition: width 1.5s ease-in-out;
+            transition: width 1.5s ease-in-out;
+        }
+
+        .barWrapper{
+            margin: 35px 0 0 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+/****
+===========================================================
+       Work SEction
+===========================================================
+***/
+#work{
+    margin: $margin;
+   background-image: url("../images/work/work.jpg");
+    height: 650px;
+    @include imageBgParallax;
+    .sectionTitle{
+        margin-top: 100px;
+        color:#ffffff;
+        p:last-child{
+            max-width: 700px;
+            margin: 25px auto 0;
+        }
+    }
+    .workPlan{
+        position: relative;
+        margin-top: 160px;
+        margin-left: 60px;
+        h2{
+            font-size: 150px;
+            transform: rotate(90deg);
+            position: absolute;
+            top: -140px;
+            color: #EBC700;
+            left: 25px;
+        }
+       .divRotate{
+           transform: rotate(-90deg);
+           color:#ffffff;
+           h4{
+               font-size: 17px;
+               font-weight: 500;
+           }
+           p{
+               transform: rotate(90deg);
+               position: absolute;
+               top: 40px;
+               right: 110px;
+               font-size: 45px;
+           }
+       }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/****
+===========================================================
+             for Scroll Up
+===========================================================
+***/
+#service{
+    margin: $margin;
+    .service-Owl{
+        .item{
+            text-align: center;
+            padding: 10px;
+            -webkit-transition: all 2s ease-in-out;
+            -moz-transition: all 2s ease-in-out;
+            -ms-transition: all 2s ease-in-out;
+            -o-transition: all 2s ease-in-out;
+            p i{
+
+            }
+            h4{
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #000000;
+                margin: 35px 0 15px;
+                font-size: 30px;
+            }
+            &:hover{
+                border: 1px solid #000000;
+            }
+        }
+    }
+    .textMe{
+        background-image: url("../images/textme/textme.jpg");
+        @include imageBgParallax;
+        background-size: cover;
+        .available{
+            text-align: center;
+            padding: 80px 0px;
+            h2{
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #ffffff;
+                font-size: 40px;
+                margin: 0 0 50px 0;
+            }
+            .btn{
+                font-size: 20px;
+                padding: 8px 12px 6px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+/****
+===========================================================
+             for Scroll Up
+===========================================================
+***/
+
+
+
+
+/****
+===========================================================
+             for Scroll Up
+===========================================================
+***/
+@keyframes hvr-ripple-out {
+    100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0; } }
+.scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 55px;
+    right: 15px;
+    z-index: 99;
+    text-align: center;
+    color: #fff;
+    background: #FFE401;
+    border-radius: 50%;
+    font-size: 25px;
+    display: none; }
+.scrollup::before {
+    content: '';
+    position: absolute;
+    border: 2px solid #FFE401;
+    border-radius: 50%;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    -webkit-animation: hvr-ripple-out 1.2s ease-in-out infinite;
+    animation: hvr-ripple-out 1.2s ease-in-out infinite; }
+.scrollup::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%; }
+.scrollup i {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    color: #212121; }
+
+/****
+===========================================================
+             ScrollBar
+===========================================================
+***/
+/*#scrollbubble {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: 500;
+    padding: 3px 8px;
+    background-color: #000;
+    color: #FFF;
+    border-radius: 3px; }
+#scrollbubble::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    height: 0;
+    width: 0;
+    margin-top: -4px;
+    border: 4px solid transparent;
+    border-left-color: #000; }
+
+body::-webkit-scrollbar {
+    width: 1em; }
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+
+body::-webkit-scrollbar-thumb {
+    background-color: #FFE401;
+    outline: 1px solid slategrey;
+    border-radius: 20px; }*/
+
+/*# sourceMappingURL=style.css.map */

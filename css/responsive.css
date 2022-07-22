@@ -1,0 +1,106 @@
+/*
+====================================================
+    Min-Width 320px and Max-width: 420px
+====================================================
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  header a .mainLogo {
+    margin: 0 auto 0;
+    width: 100px;
+  }
+  header button {
+    top: 20px;
+    right: -40px;
+  }
+  header button span {
+    width: 27px;
+  }
+  header nav .navLogo {
+    margin: 0 auto 0;
+    width: 100px;
+  }
+  header nav ul {
+    right: -468px;
+    top: 53px;
+  }
+  header nav ul li a {
+    font-size: 12px;
+    color: #000000;
+    margin-left: -27px;
+    background-color: transparent;
+  }
+  header nav ul li a:hover, header nav ul li a:focus, header nav ul li a:active {
+    border: none;
+    background-color: transparent;
+  }
+
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: red;
+  }
+
+  .activeheader nav, .open nav {
+    height: 90px;
+  }
+
+  .activeheader nav ul li a:hover, .activeheader nav ul li a:active {
+    color: red;
+  }
+}
+/*
+====================================================
+    Min-Width 320px and Max-width: 420px
+====================================================
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  header a .mainLogo {
+    margin: 0 auto 0;
+    width: 100px;
+  }
+  header button {
+    top: 20px;
+    right: -40px;
+  }
+  header button span {
+    width: 27px;
+  }
+  header nav .navLogo {
+    margin: 0 auto 0;
+    width: 100px;
+  }
+  header nav ul {
+    right: -420px;
+    top: 50px;
+  }
+  header nav ul li a {
+    font-size: 14px;
+    color: #000000;
+    margin-left: -27px;
+    background-color: transparent;
+  }
+  header nav ul li a:hover, header nav ul li a:focus, header nav ul li a:active {
+    border: none;
+    background-color: transparent;
+  }
+
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: red;
+  }
+
+  .activeheader nav, .open nav {
+    height: 90px;
+  }
+
+  .activeheader nav ul li a:hover, .activeheader nav ul li a:active {
+    color: red;
+  }
+}
+/*
+====================================================
+    Min-Width 320px and Max-width: 420px
+====================================================
+*/
+/*
+====================================================
+    Min-Width 320px and Max-width: 420px
+====================================================
+*/
